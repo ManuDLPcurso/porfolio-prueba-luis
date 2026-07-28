@@ -10,7 +10,7 @@ const techClasses: Record<string, string> = {
   React: "tech-badge--react",
   Ionic: "tech-badge--ionic",
   Angular: "tech-badge--angular",
-  "MongoDB": "tech-badge--mongodb",
+  MongoDB: "tech-badge--mongodb",
   Supabase: "tech-badge--supabase",
   GitHub: "tech-badge--github",
   TypeScript: "tech-badge--react",

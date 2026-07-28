@@ -19,9 +19,12 @@
     "@ionic/react": "^8.5.0",
     "@ionic/react-router": "^8.5.0",
     "@supabase/supabase-js": "^2.110.2",
+    "framer-motion": "^12.43.0",
     "ionicons": "^7.4.0",
+    "lucide-react": "^1.27.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "react-hot-toast": "^2.6.0",
     "react-router": "^5.3.4",
     "react-router-dom": "^5.3.4"
   },
@@ -32,6 +35,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-legacy": "^5.0.0",
     "@vitejs/plugin-react": "^4.0.1",
+    "pdfkit": "^0.19.1",
     "typescript": "~5.9.0",
     "vite": "^5.0.0"
   },
