@@ -1,7 +1,0 @@
-{
-  "name": "Portfolio LOTR",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react-vite"
-}

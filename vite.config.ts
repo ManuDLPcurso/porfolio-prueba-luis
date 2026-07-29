@@ -7,6 +7,14 @@ export default defineConfig({
     react(),
     legacy()
   ],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+      }
+    }
+  },
   build: {
     rollupOptions: {
       output: {
