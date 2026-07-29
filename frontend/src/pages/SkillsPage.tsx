@@ -12,7 +12,7 @@ export default function SkillsPage() {
   useEffect(() => {
     SkillService.getAll()
       .then(setSkills)
-      .catch(console.error)
+      .catch(() => {})
       .finally(() => setLoading(false));
   }, []);
 

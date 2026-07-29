@@ -13,8 +13,7 @@ export class ProfileService {
   static async getProfile(): Promise<Profile | null> {
     try {
       return await apiClient.get<Profile>('/profile');
-    } catch (error) {
-      console.warn('No profile found:', error);
+    } catch {
       return null;
     }
   }

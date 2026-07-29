@@ -7,7 +7,7 @@ export default function AboutPage() {
   const [user, setUser] = useState<GithubUser | null>(null);
 
   useEffect(() => {
-    GithubService.getUser().then(setUser).catch(console.error);
+    GithubService.getUser().then(setUser).catch(() => {});
   }, []);
 
   return (

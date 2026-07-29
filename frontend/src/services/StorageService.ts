@@ -1,10 +1,12 @@
+const API_BASE = import.meta.env.VITE_API_URL || '/api';
+
 export class StorageService {
   static async uploadImage(file: File, bucket: string = 'projects'): Promise<string> {
     const formData = new FormData();
     formData.append('file', file);
     formData.append('bucket', bucket);
 
-    const res = await fetch('/api/upload', {
+    const res = await fetch(`${API_BASE}/upload`, {
       method: 'POST',
       body: formData,
     });
@@ -15,7 +17,7 @@ export class StorageService {
   }
 
   static async deleteImage(fileName: string, bucket: string = 'projects'): Promise<void> {
-    const res = await fetch(`/api/upload?fileName=${fileName}&bucket=${bucket}`, {
+    const res = await fetch(`${API_BASE}/upload?fileName=${fileName}&bucket=${bucket}`, {
       method: 'DELETE',
     });
     if (!res.ok) throw new Error('Error deleting file');

@@ -7,7 +7,6 @@ export default defineConfig({
     react(),
     legacy()
   ],
-  base: './',
   build: {
     rollupOptions: {
       output: {

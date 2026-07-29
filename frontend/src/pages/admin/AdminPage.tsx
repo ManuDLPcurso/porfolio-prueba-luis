@@ -43,7 +43,7 @@ export default function AdminPage() {
         mensajesNoLeidos: m.filter(msg => !msg.leido).length,
         habilidades: s.length,
       });
-    } catch (e) { console.error(e); }
+    } catch { /* silently fail */ }
     setLoading(false);
   };
 
@@ -256,7 +256,7 @@ function ProjectModal({ item, onClose, onSaved }: { item: Proyecto | null; onClo
         await ProjectService.create(data as any);
       }
       onSaved();
-    } catch (e) { console.error(e); alert('Error al guardar'); }
+    } catch { alert('Error al guardar'); }
     setSaving(false);
   };
 
@@ -340,7 +340,7 @@ function SkillModal({ item, onClose, onSaved }: { item: Habilidad | null; onClos
         await SkillService.create(form);
       }
       onSaved();
-    } catch (e) { console.error(e); alert('Error al guardar'); }
+    } catch { alert('Error al guardar'); }
     setSaving(false);
   };
 

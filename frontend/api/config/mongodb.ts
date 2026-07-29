@@ -15,7 +15,6 @@ export async function connectToDatabase(): Promise<typeof mongoose> {
 
   await mongoose.connect(MONGODB_URI);
   isConnected = true;
-  console.log('Conectado a MongoDB Atlas');
 
   return mongoose;
 }
