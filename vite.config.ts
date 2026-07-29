@@ -10,7 +10,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://backend-moongo.vercel.app',
+        target: 'https://backend-moongo.vercel.app/api',
         changeOrigin: true,
       }
     }

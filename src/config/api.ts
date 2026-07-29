@@ -1,5 +1,7 @@
 const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
+console.log("API BASE:", API_BASE);
+
 function getAuthHeaders(): Record<string, string> {
   const token = localStorage.getItem('token');
   if (token) {
