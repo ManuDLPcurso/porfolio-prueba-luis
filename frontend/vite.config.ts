@@ -15,7 +15,6 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           ionic: ['@ionic/react', '@ionic/react-router'],
           framer: ['framer-motion'],
-          supabase: ['@supabase/supabase-js'],
         }
       }
     }

@@ -9,20 +9,18 @@ html, body, #root, ion-app {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: var(--lotr-dark);
+  background-color: var(--bg);
 }
 
 body {
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
- body {
   background: linear-gradient(
     180deg,
     var(--bg) 0%,
     var(--bg-secondary) 100%
   );
   color: var(--text);
-
   background-attachment: fixed;
 }
 
@@ -44,7 +42,7 @@ body {
 
 .lotr-text {
   font-family: 'Inter', sans-serif;
-  color: #c8c8d0;
+  color: var(--text);
   line-height: 1.7;
 }
 
@@ -121,7 +119,7 @@ body {
 
 /*  CARDS TEMÁTICAS  */
 .lotr-card {
-  background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(15, 15, 26, 0.95));
+  background: var(--card);
   border: 1px solid rgba(201, 162, 39, 0.15);
   border-radius: 12px;
   padding: 24px;
@@ -210,16 +208,6 @@ body {
   box-shadow: 0 0 15px rgba(71, 162, 72, 0.2);
 }
 
-.tech-badge--supabase {
-  color: #3ecf8e;
-  border-color: rgba(62, 207, 142, 0.3);
-  background: rgba(62, 207, 142, 0.08);
-}
-
-.tech-badge--supabase:hover {
-  box-shadow: 0 0 15px rgba(62, 207, 142, 0.2);
-}
-
 .tech-badge--github {
   color: #e8e8e8;
   border-color: rgba(232, 232, 232, 0.2);
@@ -297,7 +285,7 @@ body {
 
 /* FOOTER */
 .lotr-footer {
-  background: rgba(10, 10, 18, 0.95);
+  background: var(--navbar);
   border-top: 1px solid rgba(201, 162, 39, 0.15);
   padding: 40px 20px;
   text-align: center;
@@ -315,7 +303,7 @@ body {
 
 /*  REPO CARD /Tarjetas visuales que hemos visto */
 .repo-card {
-  background: linear-gradient(145deg, rgba(26, 26, 46, 0.95), rgba(15, 15, 30, 0.98));
+  background: var(--card);
   border: 1px solid rgba(201, 162, 39, 0.12);
   border-radius: 12px;
   padding: 24px;
@@ -357,10 +345,11 @@ body {
 }
 
 .repo-card__desc {
-  color: #a0a0b0;
+  color: var(--text);
   font-size: 0.9rem;
   line-height: 1.5;
   flex-grow: 1;
+  opacity: 0.8;
 }
 
 .repo-card__meta {
@@ -368,7 +357,8 @@ body {
   align-items: center;
   gap: 16px;
   font-size: 0.8rem;
-  color: #808090;
+  color: var(--text);
+  opacity: 0.6;
 }
 
 .repo-card__lang-dot {
@@ -413,7 +403,7 @@ body {
   padding: 8px 18px;
   border-radius: 20px;
   border: 1px solid rgba(201, 162, 39, 0.2);
-  background: rgba(26, 26, 46, 0.6);
+  background: var(--card);
   color: var(--lotr-silver);
   font-size: 0.8rem;
   font-family: 'Inter', sans-serif;
@@ -439,11 +429,11 @@ body {
 }
 
 ion-content {
-  --background: var(--lotr-dark) !important;
+  --background: var(--bg) !important;
 }
 
 ion-toolbar {
-  --background: rgba(10, 10, 18, 0.85) !important;
+  --background: var(--navbar) !important;
   --color: var(--lotr-silver) !important;
 }
 
@@ -567,7 +557,7 @@ ion-toolbar {
   left: 0;
   right: 0;
   z-index: 999;
-  background: rgba(10, 10, 18, 0.97);
+  background: var(--navbar);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(201, 162, 39, 0.15);
   padding: 16px 20px;
@@ -614,14 +604,16 @@ ion-toolbar {
 }
 
 .footer-copy {
-  color: #555;
+  color: var(--text);
+  opacity: 0.5;
   font-size: 0.75rem;
   font-family: 'Cinzel', serif;
   margin: 8px 0;
 }
 
 .footer-quote {
-  color: #444;
+  color: var(--text);
+  opacity: 0.4;
   font-size: 0.7rem;
   font-family: 'Cinzel', serif;
   font-style: italic;
@@ -701,10 +693,10 @@ ion-toolbar {
 .form-select {
   width: 100%;
   padding: 12px 16px;
-  background: rgba(26, 26, 46, 0.8);
+  background: var(--card);
   border: 1px solid rgba(201, 162, 39, 0.2);
   border-radius: 8px;
-  color: #e8e8e8;
+  color: var(--text);
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   transition: all 0.3s ease;
@@ -730,7 +722,7 @@ ion-toolbar {
 
 /* ===== SKELETON LOADER ===== */
 .skeleton {
-  background: linear-gradient(90deg, rgba(26, 26, 46, 0.6) 25%, rgba(40, 40, 60, 0.6) 50%, rgba(26, 26, 46, 0.6) 75%);
+  background: linear-gradient(90deg, var(--card) 25%, var(--bg-secondary) 50%, var(--card) 75%);
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.5s infinite;
   border-radius: 8px;
@@ -789,7 +781,7 @@ ion-toolbar {
 }
 
 .stat-card {
-  background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(15, 15, 26, 0.95));
+  background: var(--card);
   border: 1px solid rgba(201, 162, 39, 0.15);
   border-radius: 12px;
   padding: 24px;
@@ -835,7 +827,7 @@ ion-toolbar {
 .admin-table {
   width: 100%;
   border-collapse: collapse;
-  background: rgba(26, 26, 46, 0.6);
+  background: var(--card);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -854,7 +846,7 @@ ion-toolbar {
 .admin-table td {
   padding: 12px 16px;
   border-bottom: 1px solid rgba(201, 162, 39, 0.06);
-  color: #c8c8d0;
+  color: var(--text);
   font-size: 0.85rem;
 }
 
@@ -876,7 +868,7 @@ ion-toolbar {
 }
 
 .modal-content {
-  background: linear-gradient(145deg, #1a1a2e, #0f0f1a);
+  background: var(--card);
   border: 1px solid rgba(201, 162, 39, 0.2);
   border-radius: 16px;
   padding: 32px;
@@ -903,7 +895,7 @@ ion-toolbar {
 }
 
 .login-card {
-  background: linear-gradient(145deg, rgba(26, 26, 46, 0.95), rgba(15, 15, 26, 0.98));
+  background: var(--card);
   border: 1px solid rgba(201, 162, 39, 0.2);
   border-radius: 16px;
   padding: 40px;

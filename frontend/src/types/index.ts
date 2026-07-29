@@ -49,7 +49,7 @@ export interface Mensaje {
 export type UserRole = 'admin' | 'authorized' | 'guest';
 
 export interface UserProfile {
-  id: string;
+  id: Number;
   email: string;
   role: UserRole;
   full_name: string | null;

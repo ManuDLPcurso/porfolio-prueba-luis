@@ -64,6 +64,6 @@
 }
 
 body {
-  background-color: var(--lotr-dark);
-  color: var(--ion-text-color);
+  background-color: var(--bg);
+  color: var(--text);
 }
